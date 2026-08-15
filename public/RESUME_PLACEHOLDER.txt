@@ -1,0 +1,2 @@
+Drop your resume PDF here as "resume.pdf" — the Navbar, Hero, and Resume CTA
+sections all link to /resume.pdf already. Delete this file once you've added it.

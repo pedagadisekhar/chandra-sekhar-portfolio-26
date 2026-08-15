@@ -1,0 +1,153 @@
+.architecture {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.architecture-head {
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.architecture-flow {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  padding-bottom: var(--space-3);
+  scrollbar-width: thin;
+}
+
+.architecture-step {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.architecture-node {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  min-width: 150px;
+  transition: border-color var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
+}
+
+.architecture-node:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.architecture-node-index {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+}
+
+.architecture-node-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: var(--text);
+}
+
+.architecture-node-detail {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.architecture-connector {
+  position: relative;
+  width: 48px;
+  height: 1px;
+  background: var(--border-strong);
+  margin-inline: var(--space-2);
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.architecture-connector-pulse {
+  position: absolute;
+  top: -2.5px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-wash-strong);
+  animation: connector-travel 2.4s var(--ease-out) infinite;
+}
+
+@keyframes connector-travel {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .architecture-connector-pulse {
+    animation: none;
+    opacity: 1;
+    left: calc(50% - 3px);
+  }
+}
+
+@media (max-width: 720px) {
+  .architecture-flow {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: visible;
+  }
+
+  .architecture-step {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .architecture-node {
+    width: 100%;
+  }
+
+  .architecture-connector {
+    width: 1px;
+    height: 32px;
+    margin: 0 0 0 var(--space-6);
+  }
+
+  .architecture-connector-pulse {
+    top: 0;
+    left: -2.5px;
+    animation-name: connector-travel-vertical;
+  }
+
+  @keyframes connector-travel-vertical {
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      top: calc(100% - 6px);
+      opacity: 0;
+    }
+  }
+}

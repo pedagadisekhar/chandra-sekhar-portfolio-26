@@ -1,0 +1,108 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   A small, deliberate system. Warm copper accent against a cool near-black
+   surface for dark mode; the same accent darkened against warm paper for
+   light mode. Everything downstream reads from these variables — no
+   one-off hex values in component styles.
+   ========================================================================== */
+
+:root {
+  /* ---- Palette: dark (default) ---- */
+  --bg: #0b0d10;
+  --bg-elevated: #0f1216;
+  --surface: #14171b;
+  --surface-2: #1a1e23;
+  --border: #262b31;
+  --border-strong: #34393f;
+
+  --text: #edeef0;
+  --text-muted: #8d97a3;
+  --text-faint: #5c6570;
+
+  --accent: #e8a33d;
+  --accent-strong: #f4b95c;
+  --accent-wash: rgba(232, 163, 61, 0.1);
+  --accent-wash-strong: rgba(232, 163, 61, 0.18);
+  --accent-contrast: #14100a;
+
+  --signal: #5fd9a4;
+  --danger: #e8604f;
+  --danger-wash: rgba(232, 96, 79, 0.12);
+
+  --shadow-color: 220 20% 2%;
+  --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.4);
+  --shadow-md: 0 8px 24px -8px hsl(var(--shadow-color) / 0.55);
+  --shadow-lg: 0 24px 48px -16px hsl(var(--shadow-color) / 0.65);
+  --shadow-glow: 0 0 0 1px var(--accent-wash), 0 8px 32px -8px var(--accent-wash-strong);
+
+  /* ---- Type ---- */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: clamp(2.75rem, 5vw + 1rem, 4.5rem);
+
+  /* ---- Layout ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --container-width: 1160px;
+  --nav-height: 72px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+  --duration-slow: 420ms;
+
+  color-scheme: dark;
+}
+
+/* ---- Palette: light ---- */
+:root[data-theme="light"] {
+  --bg: #f6f4ef;
+  --bg-elevated: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f0eee8;
+  --border: #e3dfd5;
+  --border-strong: #d2ccbd;
+
+  --text: #1a1a18;
+  --text-muted: #5c5b54;
+  --text-faint: #8b897f;
+
+  --accent: #b9721f;
+  --accent-strong: #9c5e17;
+  --accent-wash: rgba(185, 114, 31, 0.1);
+  --accent-wash-strong: rgba(185, 114, 31, 0.16);
+  --accent-contrast: #fffaf0;
+
+  --signal: #1f9d6e;
+  --danger: #c94a3a;
+  --danger-wash: rgba(201, 74, 58, 0.1);
+
+  --shadow-color: 30 20% 60%;
+  --shadow-glow: 0 0 0 1px var(--accent-wash), 0 8px 32px -8px var(--accent-wash-strong);
+
+  color-scheme: light;
+}
