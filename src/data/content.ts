@@ -11,14 +11,14 @@ export const profile = {
   name: "Chandra Sekhar",
   fullName: "Pedagadi Chandra Sekhar",
   initials: "CS",
-  role: "Full Stack Engineer",
+  role: "Full Stack Ai Engineer",
   tagline:
-    "Full Stack Engineer building scalable web applications, backend services, and production-ready systems.",
+    "Full Stack Ai Engineer building scalable web applications, backend services, and production-ready systems.",
   location: "Hyderabad, India",
-  yearsExperience: "3.5+",
+  yearsExperience: "4+",
   email: "TODO@example.com", // TODO: replace with your real email
   github: "https://github.com/pedagadisekhar",
-  linkedin: "https://linkedin.com/in/TODO", // TODO: add your LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/chandra-sekhar-pedagadi-42b931231/", // TODO: add your LinkedIn URL
   resumeUrl: "/resume.pdf", // TODO: drop your resume PDF into /public as resume.pdf
   heroTech: [
     "React",
@@ -34,7 +34,7 @@ export const profile = {
 
 export const about = {
   intro: [
-    `I'm a Full Stack Engineer with ${profile.yearsExperience} years of experience building products end to end — React and TypeScript on the frontend, Java and Spring Boot microservices underneath.`,
+    `I'm a Full Stack Ai Engineer with ${profile.yearsExperience} years of experience building products end to end — React and TypeScript on the frontend, Java and Spring Boot microservices underneath.`,
     "Most of my work sits at the boundary between UI and system: I care as much about how a request feels to click as I do about how it behaves under load, retries, and failure.",
     "Outside of work I build fintech-style side projects to stress-test ideas about idempotency, caching, and event-driven design — the SwiftPay project below came out of one of those.",
   ],
@@ -74,28 +74,33 @@ export interface ExperienceEntry {
 export const experience: ExperienceEntry[] = [
   {
     company: "ABC Fitness Solutions",
-    role: "SDE-II",
-    duration: "TODO — Present", // TODO: add real start date
+    role: "Software Development Engineer II – Java Full Stack",
+    duration: "Apr 2025 – Present",
     summary:
-      "Full stack development on production systems, working across React frontends and Java/Spring Boot services.",
+      "Built AI-powered workflow automation and scalable full-stack features across Java, Spring Boot, React, and cloud platforms for enterprise fitness systems.",
     highlights: [
-      "TODO: add specific responsibilities and contributions for this role",
-      "TODO: add a notable feature, migration, or fix you shipped",
-      "TODO: add anything about performance, reliability, or process improvements",
+      "Built MCP-based Jira and GitHub PR automation using Claude AI, reducing story-writing effort by 70% and cutting average PR review time by 50%.",
+      "Developed batch-wise bulk deletion for large-scale event data, reducing deletion time by 65% and eliminating database timeout issues.",
+      "Implemented Redis caching and performance tuning that improved API response time by 50% and reduced database load by 40% during peak traffic.",
+      "Led Angular-to-React migration, reducing bundle size by 35% and page load time from 3.4s to 1.5s while improving reuse across 8+ modules.",
+      "Integrated LaunchDarkly feature flags, improved observability with AppDynamics and Grafana, and raised uptime from 97.4% to 99.7%.",
     ],
-    tech: ["React", "TypeScript", "Java", "Spring Boot", "Microservices", "Redis", "Docker", "AWS"],
+    tech: ["React", "TypeScript", "Java", "Spring Boot", "Redis", "Docker", "AWS", "MCP", "Claude AI"],
   },
   {
-    company: "iConcept Software Services",
-    role: "Java Full Stack Developer", // TODO: confirm exact title
-    duration: "TODO", // TODO: add real dates
+    company: "iConcept Software Services Pvt Ltd",
+    role: "Software Engineer – Full Stack (Java & React)",
+    duration: "Jan 2023 – Apr 2025",
     summary:
-      "Built and maintained full stack features spanning Java backends and React frontends.",
+      "Delivered end-to-end enterprise applications with Java backends, React frontends, reporting automation, and production support across multiple product lines.",
     highlights: [
-      "TODO: add specific responsibilities and contributions for this role",
-      "TODO: add a notable feature or project you worked on",
+      "Designed RBAC with TM/RM/ZM hierarchy, eliminating unauthorized access incidents and reducing approval cycle time by 45%.",
+      "Optimized Spring Boot REST APIs for 10,000+ daily transactions, improving response time by 30% through query tuning and pooling improvements.",
+      "Built reusable React.js UIs and automated critical workflows, accelerating feature delivery by 50% and saving 18 hours per week.",
+      "Integrated email, SMS, Excel export, and PDF generation pipelines, reducing reporting turnaround from 2 days to real time.",
+      "Resolved 40+ cross-browser issues and refactored the codebase for caching and performance, raising Lighthouse scores from 62 to 84.",
     ],
-    tech: ["Java", "Spring Boot", "React.js", "Redux", "REST APIs", "CI/CD"],
+    tech: ["Java", "Spring Boot", "React.js", "Redux", "REST APIs", "C#", "Redis", "CI/CD"],
   },
 ];
 
